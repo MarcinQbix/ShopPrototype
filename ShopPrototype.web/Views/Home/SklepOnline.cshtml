@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ShopPrototype.Data.Models.Product>
+@{
+    ViewBag.Title = "View";
+}
+<div class="jumbotron">
+
+    <div><h2>W sklepie znajduje się aktualnie @Model.Count() rodzajów artykułów</h2></div>
+
+</div>
+
+<div class="row">
+    <h2>Artykuły Dostępne aktualnie w sklepie to : </h2>
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li>Produkt @product.Name kosztuje @product.Price aktualnie w magazynie posiadamy @product.Stan sztuk</li>
+        }
+    </ul>
+</div>
